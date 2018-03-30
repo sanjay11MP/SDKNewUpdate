@@ -18,8 +18,6 @@ package mobpair.com.mylibrary;
 
 import android.os.Handler;
 
-import mobpair.com.mylibrary.Request;
-
 import java.util.concurrent.Executor;
 
 /**
@@ -33,7 +31,7 @@ public class ExecutorDelivery implements ResponseDelivery {
      * Creates a new response delivery interface.
      * @param handler {@link Handler} to post responses on
      */
-    public ExecutorDelivery(final Handler handler) {
+    ExecutorDelivery(final Handler handler) {
         // Make an Executor that just wraps the handler.
         mResponsePoster = new Executor() {
             @Override

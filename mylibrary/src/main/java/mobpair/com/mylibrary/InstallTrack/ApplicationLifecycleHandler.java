@@ -40,7 +40,6 @@ public class ApplicationLifecycleHandler implements Application.ActivityLifecycl
                 Log.d(TAG, "onActivityCreated : NotEquals");
             }
         }
-
     }
 
     @Override
