@@ -31,13 +31,16 @@ public class ApplicationLifecycleHandler implements Application.ActivityLifecycl
     public void onActivityCreated(Activity activity, Bundle bundle) {
         util = new Util(activity);
 
-      /*  Log.d(TAG, "onActivityCreated:" + getDatePref);
-        if (getDatePref.equalsIgnoreCase(formattedDate)) {
-            Log.d(TAG, "onActivityCreated : Equals");
-        } else {
-            util.setCurrentDate(formattedDate);
-            Log.d(TAG, "onActivityCreated : NotEquals");
-        }*/
+        if (getDatePref != null) {
+            Log.d(TAG, "onActivityCreated:" + getDatePref);
+            if (getDatePref.equalsIgnoreCase(formattedDate)) {
+                Log.d(TAG, "onActivityCreated : Equals");
+            } else {
+                util.setCurrentDate(formattedDate);
+                Log.d(TAG, "onActivityCreated : NotEquals");
+            }
+        }
+
     }
 
     @Override
